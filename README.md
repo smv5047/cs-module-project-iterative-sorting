@@ -7,8 +7,18 @@
 ## Objectives
 
 - describe the differences between Linear and Binary Search algorithms
+  # Linear searches by going through each item in a data structure 1 by 1 starting from the beginning. Binary Search starts by examining the middle of a data structure, based on that middle it will either search the remaining data structure to the left or right. Binary search depends on the data structure being sorted, while linear does not
 - define what runtime complexity is, differentiate between various classifications and categorize the performance of an algorithm using Big O notation
+  # runtime capacity is the amount of time a function takes to complete based on inpuit size, and commonly notated in Big O notation. search through a list in order would be O(n). Search through a nested loop would be O(n^2), while a loop whose value cuts in half each time would be O(log n)
 - distinguish when to use, classify the performance, and implement code to conduct classic iterative sorting algorithms
+  # Use it when searching through unsorted data
+  # Performance is O(n)
+  ### Implementation
+  def linear_search(arr, target):
+  for i in range( 0, len(arr) ):
+  if arr[i] == target:
+  return i
+  return -1
 
 ## Introduction
 
@@ -20,9 +30,9 @@ As you begin interviewing for jobs, you will often be expected to be able to imp
 
 ## Instructions and/or completion requirements
 
-- [ ] Open up the [iterative_sorting](src/iterative_sorting) directory
-- [ ] Read through the descriptions of the `bubble_sort` and `selection_sort` algorithms
-- [ ] Implement `bubble_sort` and `selection_sort` in [iterative_sorting.py](src/iterative_sorting/iterative_sorting.py)
+- [x] Open up the [iterative_sorting](src/iterative_sorting) directory
+- [x] Read through the descriptions of the `bubble_sort` and `selection_sort` algorithms
+- [] Implement `bubble_sort` and `selection_sort` in [iterative_sorting.py](src/iterative_sorting/iterative_sorting.py)
 - [ ] Test your implementation by running `test_iterative.py`
 - [ ] Implement all the methods in the [searching.py](src/searching/searching.py) file in the [searching](src/searching) directory.
 - [ ] Test your implementation of the searching methods by running `test_searching.py`.
